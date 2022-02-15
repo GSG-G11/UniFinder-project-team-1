@@ -22,10 +22,10 @@ UniFinder is a website to help students find universities worldwide with some ge
 
 ## 👉🏻 **Our website uses two different APIs:** <span id='API'></span>
 
--   First one, to get the general info of any country. Click [here](https://restcountries.com/) to check it out.
--   Second one to get a list of all universities in every country. Click [here](https://github.com/Hipo/university-domains-list) to check it out.
+-   The first one is to get the general info of any country. Click [here](https://restcountries.com/) to check it out.
+-   The second one is to get a list of all universities in every country. Click [here](https://github.com/Hipo/university-domains-list) to check it out.
 
-## **Features** <span id='features'></span>
+## 👉🏻 **Features** <span id='features'></span>
 
 -   Simple UI
 -   Using APIs
@@ -42,9 +42,9 @@ UniFinder is a website to help students find universities worldwide with some ge
 
 ## 👉🏻 **User Journey** <span id='Journey'></span>
 
--   First, the user will interact with the landing page which contains a brief summary of the website and a button that will transfer the user to the next page (search section)
--   Second, in the search page the user can search for any country, then a recommendation list would appear as he starts typing.
--   Third, after the user chooses a country,it will transfer him to the general info page that contains main information about the selected country, and a button that would show him a list of all universities in the country.
+-   First, the user will interact with the landing page which contains a summary of the website and a button that will transfer the user to the next page (search section)
+-   Second, on the search page the user can search for any country, then a recommendation list would appear as he starts typing.
+-   Third, after the user chooses a country, it will transfer him to the general info page that contains main information about the selected country, and a button that would show him a list of all universities in the country.
 -   Fourth, as he clicks on any of the universities, it will transfer him to the official website of the selected university
 
 ## 👉🏻 **User stories** <span id='stories'></span>
