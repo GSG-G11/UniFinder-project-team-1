@@ -435,7 +435,7 @@ button {
 }
 
 .search-logo > img {
-    max-width: 450px;
+    max-width: 410px;
     margin: 0 auto;
 }
 
@@ -504,6 +504,15 @@ button {
         gap: 5px;
     }
 
+    .country:nth-child(5),
+    .country:nth-child(6) {
+        display: none;
+    }
+    .country-name {
+        width: 100%;
+        max-width: none;
+    }
+
     .country,
     .country-image {
         width: 250px;
@@ -529,6 +538,15 @@ button {
     }
 }
 
+@media (max-width: 1095px) {
+    .country:nth-child(3),
+    .country:nth-child(4),
+    .country:nth-child(5),
+    .country:nth-child(6) {
+        display: none;
+    }
+}
+
 @media (max-width: 900px) {
     .body-search {
         display: flex;
@@ -544,9 +562,13 @@ button {
     .search {
         position: relative;
         height: 50px;
-        /* width: 450px; */
         width: 100%;
         margin: 0 auto;
+    }
+
+    .country-name {
+        width: 100%;
+        max-width: none;
     }
 
     .country-input {
@@ -562,5 +584,12 @@ button {
     .popular-country,
     .search-form {
         width: 90%;
+    }
+
+    .country:nth-child(3),
+    .country:nth-child(4),
+    .country:nth-child(5),
+    .country:nth-child(6) {
+        display: block;
     }
 }
