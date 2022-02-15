@@ -1,17 +1,18 @@
 /* ------------------------------------------------------------------
                           [Table of contents]
-         ***     01.  ==>   Root Variables And Font Family 
-         ***     02.  ==>   General Style   
-         ***     03.  ==>   Navbar Style   
-         ***     04.  ==>   Mobile Size
+        ***     01.  ==>   Root Variables And Font Family 
+        ***     02.  ==>   General Style   
+        ***     03.  ==>   Navbar Style   
+        ***     04.  ==>   Mobile Size
                              4-1 Cover image Style
                              4-2 Texts Style
                              4-3 Button Style
-         ***     05.  ==>    Media Query
+        ***     05.  ==>    Media Query
                              5-1 Tablet Size
                              5-2 Laptop Size
-         ***     06.  ==>   Navbar media Query             
-         ***     07.  ==>   Section Body Search            
+                             5-3 Navbar media Query
+        ***     06.  ==>   Navbar media Query             
+        ***     07.  ==>   Section Body Search    
 --------------------------------------------------------------------- */
 
 /* Root Variables */
@@ -30,6 +31,8 @@
     --white: #ffffff;
     --shadow-color: #41414185;
     --input-color: #a6a6a6;
+    --odd-cards: #ffe7e5;
+    --even-cards: #ecfcee;
 }
 
 /* Font Family */
@@ -235,7 +238,6 @@ button {
 }
 
 /* 5-2 Laptop Size */
-
 @media (min-width: 781px) {
     .container {
         display: grid;
@@ -291,7 +293,7 @@ button {
 
 @media (max-width: 800px) {
     .navbar-container {
-        padding: 30px 50px;
+        padding: 30px 33px;
     }
 }
 
