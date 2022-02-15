@@ -8,12 +8,13 @@
 .section-header {
     padding: 0 2rem;
     font-size: 1.4rem;
+    color: var(--font-color);
 }
 
 .all-info {
-    background-color: var(--light-gray);
+    background-color: var( --light-gray-2);
     height: 12rem;
-    width: 85%;
+    width: 92%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@
 
 .info-head {
     display: flex;
-    margin-left: 1.8rem;
+    margin-left: 2.3rem;
 }
 
 .country-img {
@@ -40,7 +41,7 @@
 .info-div {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 1rem;
     font-size: 1.3rem;
 }
@@ -55,4 +56,68 @@
     opacity: 30%;
     font-size: 1.3rem;
     padding-right: 3vw;
+}
+
+
+/* 1-2 Universities Cards Section Style */
+
+
+/*  
+    --primary-color: #FF6D63;
+    --font-color: #0D161D;
+    --odd-icon-color: #FF9D95;
+    --even-icon-color: #BFCDFF;
+    --primary-nav-item-color: #e4867f;
+    --gray: #A8A6A6;
+    --light-gray: #e4e4e4;
+    --light-gray-2: #f0f0f0;
+    --black: #000000;
+    --white: #ffffff;
+    --odd-cards: #FFE7E5;
+    --even-cards: #ECFCEE;
+*/
+
+.uni-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 97%;
+    margin-top: 2rem;
+}
+
+.card-btn {
+    border-radius: 16px;
+    padding: 30px 10px;
+    margin: 0 10px 15px 15px;
+    height: 120px;
+    border: none;
+}
+
+.card-btn:nth-child(odd) {
+    background-color: var(--odd-cards);
+}
+
+.card-btn:nth-child(even) {
+    background-color: var(--even-cards);
+}
+
+.card p {
+    position: relative;
+    font-size: 1rem;
+    top: 8px;
+    color: var(--font-color);
+}
+
+.card-btn:nth-child(even) .far {
+    color: var( --even-icon-color);
+}
+
+.card-btn:nth-child(odd) .far {
+    color: var( --odd-icon-color);
+}
+
+i.far.fa-school {
+    position: relative;
+    left: 45px;
+    bottom: 20px;
+    font-size: 1.5rem;
 }

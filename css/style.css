@@ -10,6 +10,7 @@
          ***     05.  ==>    Media Query
                              5-1 Tablet Size
                              5-2 Laptop Size
+                             5-3 Navbar media Query
 --------------------------------------------------------------------- */
 
 
@@ -20,6 +21,8 @@
     --font-color: #0D161D;
     --odd-icon-color: #FF9D95;
     --even-icon-color: #BFCDFF;
+    --odd-cards: #FFE7E5;
+    --even-cards: #ECFCEE;
     --primary-nav-item-color: #e4867f;
     --gray: #A8A6A6;
     --light-gray: #e4e4e4;
@@ -169,14 +172,14 @@ button {
 --------------------------------------------------------------------- */
 
 
-/* 3-1 Cover image Style */
+/* 4-1 Cover image Style */
 
 .cover-img {
     margin-top: 3rem;
 }
 
 
-/* 3-2 Texts Style */
+/* 4-2 Texts Style */
 
 .main-text {
     font-size: 1.4rem;
@@ -195,7 +198,7 @@ button {
 }
 
 
-/* 3-3 Button Style */
+/* 4-3 Button Style */
 
 .start-btn {
     background-color: var(--primary-color);
@@ -219,7 +222,7 @@ button {
 --------------------------------------------------------------------- */
 
 
-/* 4-1 Tablet Size */
+/* 5-1 Tablet Size */
 
 @media (min-width:498px) and (max-width:780px) {
     .cover-img {
@@ -239,7 +242,7 @@ button {
 }
 
 
-/* 4-2 Laptop Size */
+/* 5-2 Laptop Size */
 
 @media (min-width:781px) {
     .container {
@@ -289,16 +292,14 @@ button {
 }
 
 
-/* ------------------------------------------------------------------
-                    ***       Navbar media Query         ***
---------------------------------------------------------------------- */
+/* 5-3 Navbar media Query */
 
 
 /* display windows less than 800px */
 
 @media (max-width: 800px) {
     .navbar-container {
-        padding: 30px 50px;
+        padding: 30px 33px;
     }
 }
 
