@@ -61,22 +61,6 @@
 
 /* 1-2 Universities Cards Section Style */
 
-
-/*  
-    --primary-color: #FF6D63;
-    --font-color: #0D161D;
-    --odd-icon-color: #FF9D95;
-    --even-icon-color: #BFCDFF;
-    --primary-nav-item-color: #e4867f;
-    --gray: #A8A6A6;
-    --light-gray: #e4e4e4;
-    --light-gray-2: #f0f0f0;
-    --black: #000000;
-    --white: #ffffff;
-    --odd-cards: #FFE7E5;
-    --even-cards: #ECFCEE;
-*/
-
 .uni-container {
     display: grid;
     grid-template-columns: 50% 50%;
