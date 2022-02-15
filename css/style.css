@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------------
+                          [Table of contents]
+         ***     01.  ===>   Root Variable And Font Family  ***
+         ***     02.  ===>   Global Style    ***
+         ***     03.  ===>       ***
+--------------------------------------------------------------------- */
+
+/* Root Variable */
+:root {
+    --primary-color: #FF6D63;
+    --font-color: #0D161D;
+    --odd-icon-color: #FF9D95;
+    --even-icon-color: #BFCDFF;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700&display=swap');
+
+/* ------------------------------------------------------------------
+                    ***     Global Style        ***
+--------------------------------------------------------------------- */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+
+p,
+div {
+    margin: 0;
+}
+
+li,
+ul,
+ol {
+    list-style: none;
+}
+
+select,
+button,
+button:focus,
+input,
+input:focus textarea,
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
