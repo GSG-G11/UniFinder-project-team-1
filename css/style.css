@@ -31,8 +31,8 @@
 
 html {
     scroll-behavior: smooth;
-    font-family:'Montserrat', sans-serif;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -61,14 +61,6 @@ textarea:focus {
     border: none;
 }
 
-i {
-    color: var(--black);
-    font-size: 1.4rem;
-}
-
-button {
-    cursor: pointer;
-}
 
 a {
     text-decoration: none;
@@ -81,7 +73,6 @@ img {
 }
 
 button {
-    background-color: transparent;
     border: none;
     cursor: pointer;
 }
