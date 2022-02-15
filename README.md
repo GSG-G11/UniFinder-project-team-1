@@ -20,7 +20,7 @@ UniFinder is a website to help students find universities worldwide with some ge
 -   [Figma design](https://www.figma.com/file/667LkL2JWePEJSLGw8ON0E/UniFinder?node-id=0%3A1)
 -   [Live link](https://gsg-g11.github.io/UniFinder-project-team-1/)
 
-## 👉🏻 **Our website uses three different APIs:** <span id='API'></span>
+## 👉🏻 **Our website uses two different APIs:** <span id='API'></span>
 
 -   First one, to get the general info of any country. Click [here](https://restcountries.com/) to check it out.
 -   Second one to get a list of all universities in every country. Click [here](https://github.com/Hipo/university-domains-list) to check it out.
