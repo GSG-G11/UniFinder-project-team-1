@@ -21,7 +21,7 @@
     --primary-color: #ff6d63;
     --font-color: #0d161d;
     --odd-icon-color: #ff9d95;
-    --overlay-color: #7a3f3a7a;
+    --overlay-color: #8f615d7a;
     --even-icon-color: #bfcdff;
     --primary-nav-item-color: #e4867f;
     --gray: #a8a6a6;
@@ -60,6 +60,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 p,
@@ -87,7 +88,7 @@ a {
     text-decoration: none;
 }
 
-img {
+img,svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -434,7 +435,7 @@ button {
     text-align: center;
 }
 
-.search-logo > img {
+.search-logo > svg {
     max-width: 410px;
     margin: 0 auto;
 }
@@ -460,6 +461,14 @@ button {
     height: 200px;
     max-width: 200px;
     max-height: 200px;
+    transition: all ease-in-out 0.3s;
+    animation: AnimationXAxis calc(0.6s * var(--i)) ease-in-out;
+}
+@keyframes AnimationXAxis {
+    0% {
+        opacity: 0;
+        transform: translateX(100vw) scale(0);
+    }
 }
 
 .country-name {
@@ -485,6 +494,8 @@ button {
 .country:hover .country-name {
     opacity: 1;
     visibility: visible;
+    z-index: 99;
+    border-radius: 0;
 }
 
 .country-image {
@@ -492,8 +503,11 @@ button {
     height: 200px;
     max-width: 200px;
     max-height: 200px;
-    border-radius: 15px;
-    transition: all ease-in-out 0.3s;
+    border-radius: 15px !important;
+    transition: all ease-in-out 0.5s;
+}
+.country:hover .country-image {
+    transform: scale(1.7) rotate(15deg);
 }
 
 @media (max-width: 1470px) {
@@ -574,7 +588,7 @@ button {
     .country-input {
         width: 100%;
     }
-    .search-logo > img {
+    .search-logo > svg {
         width: 100%;
         height: 100%;
         min-width: none;
@@ -591,5 +605,149 @@ button {
     .country:nth-child(5),
     .country:nth-child(6) {
         display: block;
+    }
+}
+
+/* ----------------------------------------------------------
+    Animation SVG
+------------------------------------------------------------- */
+
+#other-location-1 {
+    animation: other-location-1 1s ease-in-out infinite alternate 0.2s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes other-location-1 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(45%);
+    }
+}
+#other-location-2 {
+    animation: other-location-2 1s ease-in-out infinite alternate 0.8s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes other-location-2 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(25%);
+    }
+}
+
+#plan {
+    animation: planAnimation 4s infinite forwards 1.2s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes planAnimation {
+    0% {
+        transform: translateY(0%) translateX(0%);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-60%) translateX(-60%);
+    }
+
+    100% {
+        transform: translateY(-60%) translateX(-60%);
+        opacity: 0;
+    }
+}
+
+/* --------------  welcome SVG Animation ----------- */
+
+#location-7,
+#location-1 {
+    animation: debounceLocation-7 1s ease-in-out infinite alternate 0.2s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes debounceLocation-7 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(45%);
+    }
+}
+
+#location-6,
+#location-2 {
+    animation: debounceLocation-6 2s ease-in-out infinite alternate 0.8s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes debounceLocation-6 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(30%);
+    }
+}
+
+#location-5,
+#location-3 {
+    animation: debounceLocation-6 3s ease-in-out infinite alternate 1.4s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes debounceLocation-6 {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(40%);
+    }
+}
+
+#location-s {
+    animation: debounceLocation-s 4s ease-in-out infinite alternate 2s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes debounceLocation-s {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(40%);
+    }
+}
+
+.appear {
+    animation: appear 2s ease-in-out calc(0.2s * var(--i)),
+        AnimationAppear calc(0.6s * var(--i)) ease-in-out;
+}
+
+@keyframes AnimationAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(50vw) scale(0);
+    }
+}
+
+.appear-after-1-sec {
+    animation: appear 2s ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
