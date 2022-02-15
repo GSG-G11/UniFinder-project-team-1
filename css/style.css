@@ -1,29 +1,42 @@
 /* ------------------------------------------------------------------
                           [Table of contents]
-         ***     01.  ===>   Root Variable And Font Family  ***
-         ***     02.  ===>   Global Style    ***
-         ***     03.  ===>       ***
+         ***     01.  ==>   Root Variables And Font Family 
+         ***     02.  ==>   General Style   
+         ***     03.  ==>   Navbar Style   
+         ***     04.  ==>   Mobile Size
+                             4-1 Cover image Style
+                             4-2 Texts Style
+                             4-3 Button Style
+         ***     05.  ==>    Media Query
+                             5-1 Tablet Size
+                             5-2 Laptop Size
 --------------------------------------------------------------------- */
 
-/* Root Variable */
+
+/* Root Variables */
+
 :root {
-    --primary-color: #ff6d63;
+    --primary-color: #FF6D63;
+    --font-color: #0D161D;
+    --odd-icon-color: #FF9D95;
+    --even-icon-color: #BFCDFF;
     --primary-nav-item-color: #e4867f;
-    --font-color: #0d161d;
-    --odd-icon-color: #ff9d95;
-    --even-icon-color: #bfcdff;
-    --white: #ffffff;
+    --gray: #A8A6A6;
     --light-gray: #e4e4e4;
     --light-gray-2: #f0f0f0;
     --black: #000000;
+    --white: #ffffff;
 }
 
+
 /* Font Family */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700&display=swap');
 
 /* ------------------------------------------------------------------
-                    ***     Global Style        ***
+                    ***     General Style        ***
 --------------------------------------------------------------------- */
+
 *,
 *::after,
 *::before {
@@ -79,6 +92,14 @@ button {
     cursor: pointer;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
 /* -------------------------------------------
             Nav Bar Style
 ------------------------------------------------ */
@@ -92,7 +113,7 @@ button {
     height: 10vh;
 }
 
-.logo > a {
+.logo>a {
     text-decoration: none;
     color: var(--primary-color);
     font-style: normal;
@@ -101,7 +122,8 @@ button {
     line-height: 16px;
     transition: all ease-in-out 0.3s;
 }
-.logo:hover > a {
+
+.logo:hover>a {
     color: var(--odd-icon-color);
 }
 
@@ -114,7 +136,7 @@ button {
     margin: 0 15px;
 }
 
-.nav-item > a {
+.nav-item>a {
     padding: 10px 15px;
     color: var(--odd-icon-color);
     border-radius: 5px 0px 5px 0;
@@ -125,7 +147,7 @@ button {
     font-weight: bold;
 }
 
-.nav-item > a:hover,
+.nav-item>a:hover,
 .nav-active {
     padding: 10px 15px !important;
     color: var(--white) !important;
@@ -137,23 +159,152 @@ button {
     position: relative;
 }
 
-
 .bar {
     display: none;
 }
 
-/* -------------------------
-         media Query 
----------------------------- */
+
+/* ------------------------------------------------------------------
+                    ***     Mobile Size Style        ***
+--------------------------------------------------------------------- */
+
+
+/* 3-1 Cover image Style */
+
+.cover-img {
+    margin-top: 3rem;
+}
+
+
+/* 3-2 Texts Style */
+
+.main-text {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 25px 25px 0 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.more-text {
+    font-size: 1.2rem;
+    color: var(--gray);
+    line-height: 28px;
+    text-align: justify;
+    padding: 25px 20px 25px 20px;
+}
+
+
+/* 3-3 Button Style */
+
+.start-btn {
+    background-color: var(--primary-color);
+    margin: auto;
+    width: 80%;
+    height: 4.5rem;
+    border-radius: 16px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.start-btn:hover {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+
+/* ------------------------------------------------------------------
+                    ***     Responsive Style        ***
+--------------------------------------------------------------------- */
+
+
+/* 4-1 Tablet Size */
+
+@media (min-width:498px) and (max-width:780px) {
+    .cover-img {
+        margin-top: 1rem;
+        width: 100vw;
+    }
+    .welcome-img {
+        width: 70%;
+    }
+    .more-text {
+        font-size: 1.3rem;
+        padding: 25px 80px 25px 80px;
+    }
+    .main-text {
+        padding: 25px 70px 0 70px;
+    }
+}
+
+
+/* 4-2 Laptop Size */
+
+@media (min-width:781px) {
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: fit-content;
+    }
+    .right {
+        height: 100vh;
+        background-color: var(--primary-color);
+    }
+    .cover-img {
+        margin: 0 auto;
+    }
+    .welcome-img {
+        height: 35rem;
+        object-fit: cover;
+    }
+    .main-text {
+        font-size: 2rem;
+        color: var(--white);
+        text-align: left;
+        padding: 0;
+        line-height: 35px;
+    }
+    .more-text {
+        color: var(--white);
+        padding: 1.5rem 0 0 0;
+        line-height: 35px;
+    }
+    .welcome-texts {
+        margin: auto;
+        width: 60%;
+        margin-top: 10rem;
+    }
+    .start-btn {
+        background-color: var(--white);
+        color: var(--primary-color);
+        font-weight: 900;
+        margin-top: 2rem;
+        width: 70%;
+    }
+    .start-btn:hover {
+        background-color: var(--light-gray);
+        color: var(--primary-color);
+    }
+}
+
+
+/* ------------------------------------------------------------------
+                    ***       Navbar media Query         ***
+--------------------------------------------------------------------- */
+
 
 /* display windows less than 800px */
+
 @media (max-width: 800px) {
     .navbar-container {
         padding: 30px 50px;
     }
 }
 
+
 /* display windows less than 600px */
+
 @media (max-width: 600px) {
     .nav-list {
         display: flex;
@@ -166,7 +317,6 @@ button {
     .nav-item {
         margin: 30px auto;
     }
-
     .nav-list-container {
         width: 40%;
         height: 30px;
@@ -175,23 +325,20 @@ button {
         top: 10vh;
         right: 50px;
     }
-
-    .nav-item > a {
+    .nav-item>a {
         padding: 10px 15px;
         color: var(--black);
     }
-
-    .nav-item > a:hover,
+    .nav-item>a:hover,
     .nav-active {
         padding: 10px 15px !important;
         color: var(--black) !important;
         background-color: var(--light-gray-2) !important;
     }
-
     .bar {
         display: flex;
     }
-    .bar > img {
+    .bar>img {
         width: 100%;
         height: 100%;
     }
@@ -200,7 +347,9 @@ button {
     }
 }
 
+
 /* display windows less than 380px */
+
 @media (max-width: 380px) {
     body {
         min-width: 380px;
