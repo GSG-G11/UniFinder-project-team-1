@@ -1,14 +1,14 @@
-# 👉🏻 team 1 👨🏻‍💻 UniFinder
+#  UniFinder
 
-- 👉🏻 [Description](#desc)
-- 👉🏻 [Links](#links)
-- 👉🏻 [API](#API)
-- 👉🏻 [Features](#features)
-- 👉🏻 [Built with](#built)
-- 👉🏻 [User Journey](#Journey)
-- 👉🏻 [User stories](#stories)
-- 👉🏻 [Installing the project locally](#install)
-- 👉🏻 [Team members](#team)
+-  [Description](#desc)
+-  [Links](#links)
+-  [API](#API)
+-  [Features](#features)
+-  [Built with](#built)
+-  [User Journey](#Journey)
+-  [User stories](#stories)
+-  [Installing the project locally](#install)
+-  [Team members](#team)
 
 ## 👉🏻 **Description** <span id='desc'></span>
 UniFinder is a website to help students find universities worldwide with some general information about the country they search for. It provides the students with a direct link to every university website.
