@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------------
+                    ***     Mobile Size Style        ***
+--------------------------------------------------------------------- */
+
+
+/* 1-1 Genral Info Section */
+
+.section-header {
+    padding: 0 2rem;
+    font-size: 1.4rem;
+}
+
+.all-info {
+    background-color: var(--light-gray);
+    height: 12rem;
+    width: 85%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.info-head {
+    display: flex;
+    margin-left: 1.8rem;
+}
+
+.country-img {
+    width: 2rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.country-name {
+    font-size: 1.4rem;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.row-info {
+    display: flex;
+    margin-top: 4vh;
+}
+
+.icons {
+    color: #0d161d;
+    opacity: 30%;
+    font-size: 1.3rem;
+    padding-right: 3vw;
+}

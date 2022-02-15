@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniFinder - Info Page</title>
+
+    <!-- Style Link -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/info.css" />
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar-container">
+        <div class="logo">
+            <a href="index.html">UNIFINDER</a>
+        </div>
+
+        <div id="navbar-list" class="nav-list-container nav-list-hide">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-active" href="search.html">Search</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bar">
+            <img src="../images/bar.svg" alt="bar" />
+        </div>
+    </nav>
+
+    <!-- Genral Info Section -->
+    <section class="info-section">
+        <h3 class="section-header">General Information</h3>
+        <!-- We will create this div using DOM in JS -->
+        <div class="all-info">
+            <div class="info-head">
+                <img src="../images/turkey.svg" alt="Country Image" class="country-img">
+                <p class="country-name">Turkey</p>
+            </div>
+            <div class="info-div">
+
+                <div class="first-row">
+                    <div class="row-info"> <i class="fas fa-money-bill-wave icons"></i>
+                        <p class="currency"> Turkish-lira</p>
+                    </div>
+
+                    <div class="row-info"> <i class="far fa-comment-dots icons"></i>
+                        <p class="lange">Turkish</p>
+                    </div>
+                </div>
+
+                <div class="second-row">
+
+                    <div class="row-info"> <i class="fas fa-phone-alt icons"></i>
+                        <p class="code">+90</p>
+                    </div>
+
+                    <div class="row-info"><i class="fas fa-globe-americas icons"></i>
+                        <p class="region">Asia</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Script Link -->
+    <script src="../js/fetch.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/dom.js"></script>
+</body>
+
+</html>
