@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>UniFinder - Home Page</title>
 
-        <!-- Style Link -->
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <!-- Script Link -->
-        <script src="js/fetch.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/dom.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniFinder - Home Page</title>
+
+    <!-- Style Link -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left center">
+            <div class="cover-img">
+                <img src="images/welcomeImage.svg" alt="welcome Image" class="welcome-img center">
+            </div>
+        </div>
+        <div class="right">
+            <!-- ./cover-img -->
+            <div class="welcome-texts">
+                <h1 class="main-text">Your journey to uni starts here</h1>
+                <p class="more-text center">We help you to find universities with general information about the country you are looking for and a direct link to every university website.
+                </p>
+            </div>
+            <!-- ./welcome-texts -->
+            <button class="start-btn center" onclick="location.href='html/search.html'">Let’s Go</button>
+        </div>
+    </div>
+
+    <!-- Script Link -->
+    <script src="js/fetch.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dom.js"></script>
+</body>
+
 </html>
