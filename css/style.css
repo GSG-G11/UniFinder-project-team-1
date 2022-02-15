@@ -2,13 +2,14 @@
                           [Table of contents]
          ***     01.  ==>   Root Variables And Font Family 
          ***     02.  ==>   General Style   
-         ***     03.  ==>   Mobile Size
-                             3-1 Cover image Style
-                             3-2 Texts Style
-                             3-3 Button Style
-         ***     04.  ==>    Media Query
-                             4-1 Tablet Size
-                             4-2 Laptop Size
+         ***     03.  ==>   Navbar Style   
+         ***     04.  ==>   Mobile Size
+                             4-1 Cover image Style
+                             4-2 Texts Style
+                             4-3 Button Style
+         ***     05.  ==>    Media Query
+                             5-1 Tablet Size
+                             5-2 Laptop Size
 --------------------------------------------------------------------- */
 
 
@@ -19,10 +20,12 @@
     --font-color: #0D161D;
     --odd-icon-color: #FF9D95;
     --even-icon-color: #BFCDFF;
+    --primary-nav-item-color: #e4867f;
     --gray: #A8A6A6;
     --light-gray: #e4e4e4;
-    --white: #ffffff;
+    --light-gray-2: #f0f0f0;
     --black: #000000;
+    --white: #ffffff;
 }
 
 
@@ -47,7 +50,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     height: 100%;
     background-color: var(--white);
@@ -94,6 +97,70 @@ button {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+
+/* -------------------------------------------
+            Nav Bar Style
+------------------------------------------------ */
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    position: relative;
+    height: 10vh;
+}
+
+.logo>a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 16px;
+    transition: all ease-in-out 0.3s;
+}
+
+.logo:hover>a {
+    color: var(--odd-icon-color);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item>a {
+    padding: 10px 15px;
+    color: var(--odd-icon-color);
+    border-radius: 5px 0px 5px 0;
+    transition: all ease-in-out 0.3s;
+    font-size: 20px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.nav-item>a:hover,
+.nav-active {
+    padding: 10px 15px !important;
+    color: var(--white) !important;
+    background-color: var(--odd-icon-color) !important;
+    border-radius: 5px 0px 5px 0 !important;
+}
+
+.nav-list-container {
+    position: relative;
+}
+
+.bar {
+    display: none;
 }
 
 
@@ -217,5 +284,74 @@ button {
     }
     .start-btn:hover {
         background-color: var(--light-gray);
+        color: var(--primary-color);
+    }
+}
+
+
+/* ------------------------------------------------------------------
+                    ***       Navbar media Query         ***
+--------------------------------------------------------------------- */
+
+
+/* display windows less than 800px */
+
+@media (max-width: 800px) {
+    .navbar-container {
+        padding: 30px 50px;
+    }
+}
+
+
+/* display windows less than 600px */
+
+@media (max-width: 600px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        background: var(--light-gray);
+        border-radius: 16px 0px 16px 16px;
+    }
+    .nav-item {
+        margin: 30px auto;
+    }
+    .nav-list-container {
+        width: 40%;
+        height: 30px;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        right: 50px;
+    }
+    .nav-item>a {
+        padding: 10px 15px;
+        color: var(--black);
+    }
+    .nav-item>a:hover,
+    .nav-active {
+        padding: 10px 15px !important;
+        color: var(--black) !important;
+        background-color: var(--light-gray-2) !important;
+    }
+    .bar {
+        display: flex;
+    }
+    .bar>img {
+        width: 100%;
+        height: 100%;
+    }
+    .nav-list-hide {
+        display: none;
+    }
+}
+
+
+/* display windows less than 380px */
+
+@media (max-width: 380px) {
+    body {
+        min-width: 380px;
     }
 }
