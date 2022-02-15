@@ -4,8 +4,8 @@ const addListener = (selector, eventName, callback) => {
     document.querySelector(selector).addEventListener(eventName, callback);
 };
 
-addListener(".bar", "click", () => {
-    navBarList.classList.toggle('nav-list-hide')
+addListener(".bar", "click", () => {    
+    navBarList.classList.toggle("nav-list-hide");
 });
 
 const querySelector = (selector) => {

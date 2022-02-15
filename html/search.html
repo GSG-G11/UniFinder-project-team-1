@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UniFinder - Search Page</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniFinder - Search Page</title>
+        <!-- Style Link -->
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <!-- Navbar Section -->
+        <nav class="navbar-container">
+            <div class="navbar-logo">
+                <a href="../index.html">UNIFINDER</a>
+            </div>
 
-    <!-- Style Link -->
-    <link rel="stylesheet" href="../css/style.css" />
-</head>
+            <div id="navbar-list" class="nav-list-container nav-list-hide">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-active" href="search.html">Search</a>
+                    </li>
+                </ul>
+            </div>
 
-<body>
-    <!-- Navbar Section -->
-    <nav class="navbar-container">
-        <div class="logo">
-            <a href="../index.html">UNIFINDER</a>
-        </div>
+            <div class="bar">
+                <img src="../images/bar.svg" alt="bar" />
+            </div>
+        </nav>
 
-        <div id="navbar-list" class="nav-list-container nav-list-hide">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-active" href="search.html">Search</a>
-                </li>
-            </ul>
-        </div>
+        <!-- Section Body -->
+        <section class="body-search">
+            <div class="search-form">
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input
+                        type="search"
+                        id="country-input"
+                        class="country-input"
+                        placeholder="Enter Country Name"
+                        autocomplete="off"
+                        autofocus="country-input"
+                    />
+                </div>
+                <div class="search-logo">
+                    <img
+                        src="../images/Search_Background.svg"
+                        alt="Search Back Ground"
+                    />
+                </div>
+            </div>
 
-        <div class="bar">
-            <img src="../images/bar.svg" alt="bar" />
-        </div>
-    </nav>
+            <div class="popular-country">
+                <h2 class="body-search-title">Most popular</h2>
+                <div class="countries">
+                    <div class="country">
+                        <p class="country-name">Egypt</p>
+                        <img
+                            class="country-image"
+                            src="../images/egypt.jpg"
+                            alt="Country Image - egypt"
+                        />
+                    </div>
+                    <div class="country">
+                        <p class="country-name">Turkey</p>
+                        <img
+                            class="country-image"
+                            src="../images/turkey.jpg"
+                            alt="Country Image - turkey"
+                        />
+                    </div>
+                    <div class="country">
+                        <p class="country-name">Italy</p>
+                        <img
+                            class="country-image"
+                            src="../images/italy.jpg"
+                            alt="Country Image - Italy"
+                        />
+                    </div>
+                    <div class="country">
+                        <p class="country-name">emirate</p>
+                        <img
+                            class="country-image"
+                            src="../images/emirate.jpg"
+                            alt="Country Image - emirate"
+                        />
+                    </div>
+                    <div class="country">
+                        <p class="country-name">Spain</p>
+                        <img
+                            class="country-image"
+                            src="../images/spain.jpg"
+                            alt="Country Image - Spain"
+                        />
+                    </div>
+                    <div class="country">
+                        <p class="country-name">Lebanon</p>
+                        <img
+                            class="country-image"
+                            src="../images/lebanon.jpg"
+                            alt="Country Image - lebanon"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-    <!-- Script Link -->
-    <script src="../js/fetch.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/dom.js"></script>
-</body>
-
+        <!-- Script Link -->
+        <script src="../js/fetch.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/dom.js"></script>
+    </body>
 </html>
