@@ -9,11 +9,15 @@ const fetch = (method, url, callback) => {
     let xhr = new XMLHttpRequest();
 
     xhr.addEventListener("load", function () {
-        if (xhr.readyState == 4 && xhr.status === 200) {
-            let { data } = JSON.parse(xhr.responseText);
-            return callback(data);
+        if (xhr.readyState == 4 ) {
+           if ( xhr.status === 200) {
+                let response = JSON.parse(xhr.responseText);
+                return callback(response);
+           }else if ( xhr.status === 404){
+                window.location.href="../html/error.html";
+           }
         } else {
-            console.log("Status Code: " + xhr.status);
+            window.location.href="../html/error.html";
         }
     });
 

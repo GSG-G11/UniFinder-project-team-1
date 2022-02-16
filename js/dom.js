@@ -2,9 +2,9 @@ const querySelector = (selector) => {
     return document.querySelector(selector);
 };
 
-const createElement = (tagName, classNamee, parent) => {
+const createElement = (tagName, className, parent) => {
     let element = document.createElement(tagName);
-    element.className = classNamee;
+    element.className = className;
     parent.appendChild(element);
     return element;
 };
