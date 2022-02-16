@@ -28,6 +28,10 @@ const handleUniversities = ({ name, web_pages }) => {
 };
 
 const sendRequestInfo = () => {
+    if(searchInput.value === undefined || searchInput.value === ''  || searchInput.value === null ){
+        window.location.href = "../html/error.html";
+        return;
+    }
     fetch(
         "GET",
         `https://restcountries.com/v2/name/${searchInput.value}`,
@@ -46,6 +50,10 @@ const sendRequestInfo = () => {
 };
 
 const sendRequestUni = () => {
+    if(searchInput.value === undefined || searchInput.value === ''  || searchInput.value === null ){
+        window.location.href = "../html/error.html";
+        return;
+    }
     // To solve palestine name in 2 differents APIs
     if (searchInput.value === "palestine") {
         searchInput.value = "Palestine, State of";
