@@ -20,36 +20,61 @@ const handleGeneralInformation = ({
     };
 };
 
-const sendRequest = () => {
+const handleUniversities = ({ name, web_pages }) => {
+    return {
+        name,
+        website: web_pages
+    };
+};
+
+const sendRequestInfo = () => {
     fetch(
         "GET",
         `https://restcountries.com/v2/name/${searchInput.value}`,
         (element) => {
-            const localStorageStorage = convertObjectToString(
+            const generalInformation = convertObjectToString(
                 handleGeneralInformation(element[0]),
             );
-            localStorage.setItem("generalInformation", localStorageStorage);
+            localStorage.setItem("generalInformation", generalInformation);
             window.location.href = "../html/info.html";
         },
     );
 };
 
+const sendRequestUni = () => {
+    // To solve palestine name in 2 differents APIs
+    if (searchInput.value === "palestine") {
+        searchInput.value = "Palestine, State of";
+    }
+    fetch("GET", `https://api.codetabs.com/v1/proxy/?quest=http://universities.hipolabs.com/search?&country=${searchInput.value}`, (element) => {
+        let universities = [];
+        element.forEach((university) => {
+            universities.push(handleUniversities(university));
+        })
+        const universitiesStorage = convertObjectToString(universities);
+        localStorage.setItem("universitiesStorage", universitiesStorage);
+    });
+}
+
 addListener("#country-input", "keyup", (event) => {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
         event.preventDefault();
-        sendRequest();
+        sendRequestInfo();
+        sendRequestUni();
     }
 });
 
 addListener("#search-btn", "click", () => {
-    sendRequest();
+    sendRequestInfo();
+    sendRequestUni();
 });
 
 // the function for the most popular countries
 const setCountry = (country) => {
     searchInput.value = country;
-    sendRequest();
+    sendRequestInfo();
+    sendRequestUni();
 };
 
 // for static countries
