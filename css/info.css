@@ -19,7 +19,7 @@
 .all-info {
     background-color: var(--light-gray-2);
     height: 12rem;
-    width: 92%;
+    width: 88%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@ i.far.fa-school {
 }
 
 
-/* ------------------ 4. Tablet Size ------------------ */
+/* ------------------ 2. Tablet Size ------------------ */
 
 @media (min-width: 420px) {
     .uni-container {
@@ -140,7 +140,7 @@ i.far.fa-school {
 }
 
 
-/* ------------------ 5. Desktop Size ------------------ */
+/* ------------------ 3. Desktop Size ------------------ */
 
 @media (min-width: 1024px) {
     .uni-container {
@@ -160,5 +160,32 @@ i.far.fa-school {
         justify-content: flex-start;
         gap: 1.5rem;
         margin-left: 2.3rem;
+    }
+}
+
+
+/* ------------------ 4. Animation  ------------------ */
+
+.appear_card {
+    animation: appear_card 2s ease-in-out calc(0.2s * var(--i)), AnimationAppear_card calc(0.6s * var(--i)) ease-in-out;
+}
+
+.appear_container {
+    animation: appear_card calc(0.6s * var(--i)) ease-in-out;
+}
+
+@keyframes AnimationAppear_card {
+    0% {
+        opacity: 0;
+        transform: translateX(50vw) scale(0);
+    }
+}
+
+@keyframes appear_card {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
