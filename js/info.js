@@ -60,7 +60,7 @@ const handleUniCards = () => {
         let uniContainer = querySelector(".uni-container");
 
         let cardBtn = createElement("button", "card-btn", uniContainer);
-        cardBtn.setAttribute = ("onclick", `location.href = '${website}'`);
+        cardBtn.setAttribute("onclick", `window.open('${website}', '_blank')`);
 
         let card = createElement("div", "card", cardBtn);
 
