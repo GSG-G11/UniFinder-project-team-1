@@ -85,3 +85,8 @@ const handleUniCards = () => {
 
 handleGeneralInfo();
 handleUniCards();
+handleUniCards();
+handleUniCards();
+handleUniCards();
+handleUniCards();
+handleUniCards();

@@ -12,7 +12,7 @@
 }
 
 .all-info {
-    background-color: var( --light-gray-2);
+    background-color: var(--light-gray-2);
     height: 12rem;
     width: 92%;
     border-radius: 10px;
@@ -63,7 +63,7 @@
 
 .uni-container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     width: 97%;
     margin-top: 2rem;
 }
@@ -86,22 +86,77 @@
 
 .card p {
     position: relative;
-    font-size: 1rem;
     top: 8px;
     color: var(--font-color);
 }
 
 .card-btn:nth-child(even) .far {
-    color: var( --even-icon-color);
+    color: var(--even-icon-color);
 }
 
 .card-btn:nth-child(odd) .far {
-    color: var( --odd-icon-color);
+    color: var(--odd-icon-color);
 }
 
 i.far.fa-school {
     position: relative;
-    left: 45px;
     bottom: 20px;
     font-size: 1.5rem;
+    left: 40%;
+}
+
+.uni-name {
+    font-size: 1.2rem;
+}
+
+
+/* ------------------ 4. Tablet Size ------------------ */
+
+@media (min-width: 420px) {
+    .uni-container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 630px) {
+    .first-row,
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .info-div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .uni-container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+
+/* ------------------ 5. Desktop Size ------------------ */
+
+@media (min-width: 1024px) {
+    .uni-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .icons {
+        padding-right: 1vw;
+    }
+    .first-row,
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .info-div {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        margin-left: 2.3rem;
+    }
 }
