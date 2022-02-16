@@ -4,7 +4,7 @@ const convertStringToObject = (object) => {
 
 const handleGeneralInfo = () => {
     const { name, flag, currency, language, callingCode, region } =
-        convertStringToObject(localStorage.getItem("generalInformation"));
+    convertStringToObject(localStorage.getItem("generalInformation"));
 
     let infoContainer = querySelector(".all-info");
 
@@ -51,6 +51,26 @@ const handleGeneralInfo = () => {
     regionName.textContent = region;
 };
 handleGeneralInfo();
+
+const handleUniCards = () => {
+    const universitiesArray = convertStringToObject(localStorage.getItem("universitiesStorage"));
+
+    universitiesArray.forEach(({ name, website }) => {
+
+        let uniContainer = querySelector(".uni-container");
+
+        let cardBtn = createElement("button", "card-btn", uniContainer);
+        cardBtn.setAttribute = ("onclick", `location.href = '${website}'`);
+
+        let card = createElement("div", "card", cardBtn);
+
+        createElement("i", "far fa-school", card);
+
+        let uniName = createElement("p", "uni-name", card);
+        uniName.textContent = name;
+    });
+};
+handleUniCards();
 
 // -------------- Font awesome script -------------------------
 (function fontAwesome() {
