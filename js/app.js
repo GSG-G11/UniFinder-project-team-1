@@ -53,22 +53,22 @@ const setCountry = (country) => {
 };
 
 // for static countries
-addListener("#egypt", "click ", () => {
+addListener("#egypt", "click", () => {
     setCountry("egypt");
 });
-addListener("#turkey", "click ", () => {
+addListener("#turkey", "click", () => {
     setCountry("turkey");
 });
-addListener("#italy", "click ", () => {
+addListener("#italy", "click", () => {
     setCountry("italy");
 });
-addListener("#emirate", "click ", () => {
+addListener("#emirate", "click", () => {
     setCountry("emirate");
 });
-addListener("#spain", "click ", () => {
+addListener("#spain", "click", () => {
     setCountry("spain");
 });
-addListener("#lebanon", "click ", () => {
+addListener("#lebanon", "click", () => {
     setCountry("lebanon");
 });
 
