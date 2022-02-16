@@ -37,19 +37,43 @@ const sendRequest = () => {
 addListener("#country-input", "keyup", (event) => {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-        // Cancel the default action, if needed
         event.preventDefault();
-        // call the function
         sendRequest();
     }
 });
 
 addListener("#search-btn", "click", () => {
-    // call the function
     sendRequest();
 });
 
-// -------------- Font awesome script -------------------------
+// the function for the most popular countries
+const setCountry = (country) => {
+    searchInput.value = country;
+    sendRequest();
+};
+
+// for static countries
+addListener("#egypt", "click ", () => {
+    setCountry("egypt");
+});
+addListener("#turkey", "click ", () => {
+    setCountry("turkey");
+});
+addListener("#italy", "click ", () => {
+    setCountry("italy");
+});
+addListener("#emirate", "click ", () => {
+    setCountry("emirate");
+});
+addListener("#spain", "click ", () => {
+    setCountry("spain");
+});
+addListener("#lebanon", "click ", () => {
+    setCountry("lebanon");
+});
+
+
+// Font awesome script
 (function fontAwesome() {
     var css = document.createElement("link");
     css.href = "https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
