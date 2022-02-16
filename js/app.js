@@ -32,6 +32,10 @@ const sendRequestInfo = () => {
         "GET",
         `https://restcountries.com/v2/name/${searchInput.value}`,
         (element) => {
+            if (element.length <= 0 || element.status === 404 ) {
+                window.location.href = "../html/error.html";
+                return;
+            }
             const generalInformation = convertObjectToString(
                 handleGeneralInformation(element[0]),
             );
@@ -47,6 +51,10 @@ const sendRequestUni = () => {
         searchInput.value = "Palestine, State of";
     }
     fetch("GET", `https://api.codetabs.com/v1/proxy/?quest=http://universities.hipolabs.com/search?&country=${searchInput.value}`, (element) => {
+        if (element.length <= 0 ) {
+            window.location.href = "../html/error.html";
+            return;
+        }
         let universities = [];
         element.forEach((university) => {
             universities.push(handleUniversities(university));
