@@ -28,10 +28,18 @@ const handleUniversities = ({ name, web_pages }) => {
 };
 
 const sendRequestInfo = () => {
+    if(searchInput.value === undefined || searchInput.value === ''  || searchInput.value === null ){
+        window.location.href = "../html/error.html";
+        return;
+    }
     fetch(
         "GET",
         `https://restcountries.com/v2/name/${searchInput.value}`,
         (element) => {
+            if (element.length <= 0 || element.status === 404 ) {
+                window.location.href = "../html/error.html";
+                return;
+            }
             const generalInformation = convertObjectToString(
                 handleGeneralInformation(element[0]),
             );
@@ -42,11 +50,19 @@ const sendRequestInfo = () => {
 };
 
 const sendRequestUni = () => {
+    if(searchInput.value === undefined || searchInput.value === ''  || searchInput.value === null ){
+        window.location.href = "../html/error.html";
+        return;
+    }
     // To solve palestine name in 2 differents APIs
     if (searchInput.value === "palestine") {
         searchInput.value = "Palestine, State of";
     }
     fetch("GET", `https://api.codetabs.com/v1/proxy/?quest=http://universities.hipolabs.com/search?&country=${searchInput.value}`, (element) => {
+        if (element.length <= 0 ) {
+            window.location.href = "../html/error.html";
+            return;
+        }
         let universities = [];
         element.forEach((university) => {
             universities.push(handleUniversities(university));
